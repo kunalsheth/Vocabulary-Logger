@@ -31,7 +31,7 @@ public class Main {
                 .map(i -> dictionary.size() - 1 - i)
                 .mapToObj(dictionary::get)
                 .filter(w -> !alreadyKnown.contains(w))
-                .skip(Integer.parseInt(System.console().readLine("How inconspicuous do you want your words to be? [Positive Integer] ")))
+                .skip(Integer.parseInt(System.console().readLine("How easy do you want your words to be? [Positive Integer] ")))
                 .limit(Integer.parseInt(System.console().readLine("How many words do you want? [Positive Integer] ")))
                 .forEach(System.out::println);
     }
